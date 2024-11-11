@@ -1,0 +1,132 @@
+:root{
+    --color-side-A-1: #9B44F2;
+    --color-side-A-2: #1F1659;
+    --color-side-A-3: #04D99D;
+    --color-side-A-4: #038C5A;
+    --color-side-A-5: #FFDF92;
+    --color-side-B-1: #A62139;
+    --color-side-B-2: #80238C;
+    --color-side-B-3: #7326BF;
+    --color-side-B-4: #883DF2;
+    --color-side-B-5: #D92E1E;
+    --color-side-A-1-rgb: 155, 68, 242;
+    --color-side-A-2-rgb: 31, 22, 89;
+    --color-side-A-3-rgb: 4, 217, 157;
+    --color-side-A-4-rgb: 3, 140, 90;
+    --color-side-A-5-rgb: 255, 223, 146;
+    --color-side-B-1-rgb: 166, 33, 57;
+    --color-side-B-2-rgb: 128, 35, 140;
+    --color-side-B-3-rgb: 115, 38, 191;
+    --color-side-B-4-rgb: 136, 61, 242;
+    --color-side-B-5-rgb: 217, 46, 30;
+}
+
+/* Fondo estilo grunge */
+/* body {
+    background-color: #1D1D1D;
+/* background-image: url("https://www.transparenttextures.com/patterns/subtle-grunge.png"); */
+    background-image: url('../media/Identidad (Diseño)/Logo_wt.png');
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+} */
+
+
+.text-A-1{
+    color: var(--color-side-A-1);
+}
+.shadow-A-1{
+    box-shadow: 0 0.5rem 1rem var(--color-side-A-1);
+}
+.border-A-1{
+    --bs-border-opacity:1;
+    border-color: rgba(var(--color-side-A-1-rgb),var(--bs-border-opacity));
+}
+.text-A-2{
+    color: var(--color-side-A-2);
+}
+.shadow-A-2{
+    box-shadow: 0 0.5rem 1rem var(--color-side-A-2);
+}
+.border-A-2{
+    --bs-border-opacity:1;
+    border-color: rgba(var(--color-side-A-2-rgb),var(--bs-border-opacity));
+}
+.text-A-3{
+    color: var(--color-side-A-3);
+}
+.shadow-A-3{
+    box-shadow: 0 0.5rem 1rem var(--color-side-A-3);
+}
+.border-A-3{
+    --bs-border-opacity:1;
+    border-color: rgba(var(--color-side-A-3-rgb),var(--bs-border-opacity));
+}
+.text-A-4{
+    color: var(--color-side-A-4);
+}
+.shadow-A-4{
+    box-shadow: 0 0.5rem 1rem var(--color-side-A-4);
+}
+.border-A-4{
+    --bs-border-opacity:1;
+    border-color: rgba(var(--color-side-A-4-rgb),var(--bs-border-opacity));
+}
+.text-A-5{
+    color: var(--color-side-A-5);
+}
+.shadow-A-5{
+    box-shadow: 0 0.5rem 1rem var(--color-side-A-5);
+}
+.border-A-5{
+    --bs-border-opacity:1;
+    border-color: rgba(var(--color-side-A-5-rgb),var(--bs-border-opacity));
+}
+.text-B-1{
+    color: var(--color-side-B-1);
+}
+.shadow-B-1{
+    box-shadow: 0 0.5rem 1rem var(--color-side-B-1);
+}
+.border-B-1{
+    --bs-border-opacity:1;
+    border-color: rgba(var(--color-side-B-1-rgb),var(--bs-border-opacity));
+}
+.text-B-2{
+    color: var(--color-side-B-2);
+}
+.shadow-B-2{
+    box-shadow: 0 0.5rem 1rem var(--color-side-B-2);
+}
+.border-B-2{
+    --bs-border-opacity:1;
+    border-color: rgba(var(--color-side-B-2-rgb),var(--bs-border-opacity));
+}
+.text-B-3{
+    color: var(--color-side-B-3);
+}
+.shadow-B-3{
+    box-shadow: 0 0.5rem 1rem var(--color-side-B-3);
+}
+.border-B-3{
+    --bs-border-opacity:1;
+    border-color: rgba(var(--color-side-B-3-rgb),var(--bs-border-opacity));
+}
+.text-B-4{
+    color: var(--color-side-B-4);
+}
+.shadow-B-4{
+    box-shadow: 0 0.5rem 1rem var(--color-side-B-4);
+}
+.border-B-4{
+    --bs-border-opacity:1;
+    border-color: rgba(var(--color-side-B-4-rgb),var(--bs-border-opacity));
+}
+.text-B-5{
+    color: var(--color-side-B-5);
+}
+.shadow-B-5{
+    box-shadow: 0 0.5rem 1rem var(--color-side-B-5);
+}
+.border-B-5{
+    --bs-border-opacity:1;
+    border-color: rgba(var(--color-side-B-5-rgb),var(--bs-border-opacity));
+}

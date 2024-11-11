@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="../css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="./animate.css">
+  <link rel="stylesheet" href="./editor.css">
+  <link rel="stylesheet" href="./fonts.css">
+  <link rel="stylesheet" href="./mile2.css">
+  <link rel="stylesheet" href="./normalize.css">
+</head>
+
+<body>
+  <header>
+    <!-- place navbar here -->
+  </header>
+  <main>
+    <div id="block-festivalrap-theme-blockgroup1home" class="blgroup1 position-relative py-lg-5 py-4">
+
+
+      <div id="block-festivalrap-theme-2024botoneshome-2">
+        <!-- <div class="mile-field-custom">
+          <div>
+            <div class="but-home24 max-1320">
+              <div
+                class="d-flex flex-wrap justify-content-around my-lg-5 fade-up transform-up animate-bl transform_up aparece">
+                <h3><a href="https://www.canalcapital.gov.co/rock-al-parque-2024-envivo/" target="_blank">EN VIVO</a>
+                </h3>
+
+                <h3><a href="/2024/artistas">Artistas</a></h3>
+
+                <h3><a href="/sites/default/files/2024-10/Programacion-Rock-al_Parque-2024.pdf"
+                    target="_blank">Programación</a></h3>
+
+                <h3><a href="/2024/agenda-academica">Agenda Académica</a></h3>
+
+                <h3><a href="/sites/default/files/2024-11/catalogo-rock-al-parque-2024.pdf" target="_blank">Catálogo</a>
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div> -->
+      </div>
+      <div class="views-element-container max-1320"
+        id="block-festivalrap-theme-views-block-2023-artistas-interna-block-1">
+
+
+        <div>
+          <div
+            class="view-art2023 py-lg-5 py-3 js-view-dom-id-d9734d9f66bcf7241a6c3e9369b84d069f016a2e731f7733a7bdee31b276bb90 _023-artistas-interna">
+
+
+
+
+            <header>
+              <div class="d-flex justify-content-center">
+                <h2
+                  class="text-center title-sec mb-2 pb-lg-5 pb-0 position-relative fade-up transform-up animate-bl neon transform_up">
+                  Live</h2>
+              </div>
+            </header>
+
+            <div class="mile-field-custom">
+              <div>
+                <div class="but-home24 max-1320">
+                  <div
+                    class="d-flex flex-wrap  my-lg-5 fade-up transform-up animate-bl transform_up aparece">
+                    <h3><a href="#A_list" target="_blank">SIDE A</a>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="row" id="A_list">
+              
+
+            </div>
+
+            <div class="mile-field-custom">
+              <div>
+                <div class="but-home24 max-1320">
+                  <div
+                    class="d-flex flex-wrap  my-lg-5 fade-up transform-up animate-bl transform_up aparece">
+                    <h3><a href="https://www.canalcapital.gov.co/rock-al-parque-2024-envivo/" target="_blank">SIDE B</a>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="row" id="B_list">
+              
+
+            </div>
+
+
+
+
+
+
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+  <footer>
+    <!-- place footer here -->
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script
+  src="https://code.jquery.com/jquery-3.7.1.js"
+  integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+  crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+
+  <script src="./mile2.js"></script>
+  <script src="./animacion_aparecer_objetos-9b9ab3d62e9ad11af3faf3ec4244790b.js"></script>
+  <script>
+    fetch('http://127.0.0.1:5500/scripts/py/list.json')
+    .then(response=>response.json())
+    .then(response=>{
+      console.log(response)
+      response.forEach(song=>{
+        tipo = song.Tipo == 'Propio'?'distritales':song.Tipo=='Cover'?'internacionales':'nacionales'
+        if (song.Side == 'A'){
+          A_list.innerHTML+=`
+          <a href="#" class="art1 fade-up transform-up animate-bl views-row transform_up aparece text-decoration-none">
+            <div class="views-field views-field-nothing">
+              <span class="field-content">
+                <div class="box-art1 bord1 Artistas ${tipo} d-flex justify-content-between align-self-center mx-2 p-3">
+                  <h3 class="art-title">${song.Nombre}</h3>
+                  <div class="art-proc text-center">${song.Artista}</div>
+                </div>
+              </span>
+            </div>
+          </a>
+          `
+        }else if(song.Side == 'B'){
+          B_list.innerHTML+=`
+          <a href="#" class="art1 fade-up transform-up animate-bl views-row transform_up aparece text-decoration-none">
+            <div class="views-field views-field-nothing">
+              <span class="field-content">
+                <div class="box-art1 bord1 Artistas ${tipo} d-flex justify-content-between align-self-center mx-2 p-3">
+                  <h3 class="art-title">${song.Nombre}</h3>
+                  <div class="art-proc text-center">${song.Artista}</div>
+                </div>
+              </span>
+            </div>
+          </a>
+          `
+        }
+      })
+    })
+  </script>
+
+</body>
+
+</html>
