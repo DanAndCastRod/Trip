@@ -16,12 +16,58 @@
   <link rel="stylesheet" href="./mile2.css">
   <link rel="stylesheet" href="./normalize.css">
 </head>
+<style>
+  /* Configuración para que el video de fondo ocupe toda la pantalla y tenga efecto de desenfoque */
+/* Contenedor del video de fondo */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
 
+/* Estilos del video con blur */
+.video-background video {
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    filter: blur(10px); /* Desenfoque */
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+/* Capa de oscurecimiento sobre el video */
+.video-background::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Ajusta el valor de opacidad aquí */
+    z-index: 1;
+}
+
+
+</style>
 <body>
   <header>
     <!-- place navbar here -->
   </header>
   <main>
+    <!-- Contenedor del video de fondo con efecto de desenfoque -->
+<div class="video-background">
+  <video autoplay loop muted>
+      <source src="/media/5983044-uhd_3840_2160_24fps.mp4" type="video/mp4">
+      Tu navegador no soporta la etiqueta de video.
+  </video>
+</div>
+
     <div id="block-festivalrap-theme-blockgroup1home" class="blgroup1 position-relative py-lg-5 py-4">
 
 
