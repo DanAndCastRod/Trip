@@ -49,9 +49,10 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.1); /* Ajusta el valor de opacidad aquí */
+    background-color: rgba(0, 0, 0, 0.6); /* Ajusta el valor de opacidad aquí */
     z-index: 1;
 }
+
 
 
 </style>
@@ -63,7 +64,7 @@
     <!-- Contenedor del video de fondo con efecto de desenfoque -->
 <div class="video-background">
   <video autoplay loop muted>
-      <source src="/media/website.mp4" type="video/mp4">
+      <source src="/media/website 2.mp4" type="video/mp4">
       Tu navegador no soporta la etiqueta de video.
   </video>
 </div>
@@ -180,6 +181,7 @@
   <script src="./mile2.js"></script>
   <script src="./animacion_aparecer_objetos-9b9ab3d62e9ad11af3faf3ec4244790b.js"></script>
   <script>
+    // Volver accordeon y llenar list.json con lyrics
     url = 'https://trip.rocks'
     // url = 'http://127.0.0.1:5500'
     fetch(url+'/scripts/py/list.json')
@@ -200,6 +202,15 @@
               </span>
             </div>
           </a>
+          <divclass="art1 fade-up transform-up animate-bl views-row transform_up aparece text-decoration-none">
+            <div class="views-field views-field-nothing">
+              <span class="field-content">
+                <div class="box-art1 bord1 Artistas ${tipo} d-flex justify-content-between align-self-center text-center mx-2 p-3">
+                  <h3 class="art-title m-auto">${song.Lyric}</h3>
+                </div>
+              </span>
+            </div>
+          </div>
           `
         }else if(song.Side == 'B'){
           B_list.innerHTML+=`
