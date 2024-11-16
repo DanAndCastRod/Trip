@@ -1,60 +1,168 @@
-<!doctype html>
-<html lang="es-CO">
-    <head>
-        <title>Trip</title>
-        <!-- Required meta tags -->
-        <meta charset="utf-8" />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, shrink-to-fit=no"
-        />
-        <link rel="shortcut icon" href="./media/Identidad (Diseño)/Logo_bk.png" type="image/x-icon">
-        <!-- Bootstrap CSS v5.2.1 -->
-        <link rel="stylesheet" href="./css/bootstrap.min.css">
-        <link rel="stylesheet" href="./css/style.css">
-    </head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trip - Official Website</title>
+    <!-- <link rel="stylesheet" href="./css/style.css"> -->
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo" style="display: flex;">
+                <img src="./media/Identidad (Diseño)/Logo_wt.png" alt="" srcset="" style="height: 48px;">
+            </div>
+            <div class="nav-links">
+                <a href="#shows">Shows</a>
+                <a href="#artists">Artists</a>
+                <a href="#merch">Merch</a>
+                <a href="#contact">Contact</a>
+                <button class="cta-button">Book Now</button>
+            </div>
+        </nav>
+    </header>
+    
+<main>    <section class="hero">
+    <div class="hero-content">
+        <!-- <h1>Silhouette</h1> -->
+         <div><img src="./media/Identidad (Diseño)/Logo_wt.png" alt="" srcset="" style="height: 12rem;"></div>
+        <p>enjoy the trip!</p>
+        <button class="primary-button" onclick="window.location.href='./rp/'">Explore Show</button>
+        <button class="secondary-button">Listen Now</button>
+    </div>
+</section></main>
+<script>
+    `    <main>
+        <!-- Hero Section -->
 
-    <body>
-        <header>
-            <!-- place navbar here -->
-        </header>
-        <main>
-            <div class="container mt-5 bg-black opacity-75 rounded-2 h-75">
-                <div class="pt-5 px-5">
-                    <h1 class="text-center text-white">
-                        Live Rn'C
-                    </h1>
-                    <div class="mt-3 ">
-                        <h2>SIDE A</h2>
-                        <ul class="list-unstyled">
-                            <li>Song 2 (130)</li>
-                            <li>Dani California (96)</li>
-                            <li>Scar Tissue (89)  </li>
-                            <li>Break the Chains (167) propia</li>
-                            <li>High and Dry (88)</li>
-                            <li>For You (79) </li>
-                            <li>Earth on Fire (109)</li>
-                            <li>The pretender (173)</li>
-                            <li>Everlong (156)</li>
-                            <li>Time is Running Out (118) </li>
-                            <li>Hysteria (186)</li>
-                            <li>Just (88)</li>
+        <!-- Partners Section -->
+        <section class="partners">
+            <h2>Our Partners</h2>
+            <div class="partner-logos">
+                <div class="partner">Partner 1</div>
+                <div class="partner">Partner 2</div>
+                <div class="partner">Partner 3</div>
+            </div>
+        </section>
 
-                        </ul>
+        <!-- Upcoming Shows -->
+        <section class="shows" id="shows">
+            <h2>Upcoming Shows</h2>
+            <div class="shows-grid">
+                <div class="show-card">
+                    <img src="/placeholder.svg?height=300&width=400" alt="Show 1">
+                    <div class="show-info">
+                        <h3>Live at Metro</h3>
+                        <p>December 15, 2023</p>
                     </div>
-                    <div class="mt-3 text-B-1">
-                        <h2>SIDE B</h2>
+                </div>
+                <div class="show-card">
+                    <img src="/placeholder.svg?height=300&width=400" alt="Show 2">
+                    <div class="show-info">
+                        <h3>Festival Performance</h3>
+                        <p>December 20, 2023</p>
+                    </div>
+                </div>
+                <div class="show-card">
+                    <img src="/placeholder.svg?height=300&width=400" alt="Show 3">
+                    <div class="show-info">
+                        <h3>Arena Tour</h3>
+                        <p>January 5, 2024</p>
                     </div>
                 </div>
             </div>
-        </main>
-        <footer>
-            <!-- place footer here -->
-            
-        </footer>
-        <!-- Bootstrap JavaScript Libraries -->
-        <script src="./scripts/js/popper.min.js"></script>
-        <script src="./scripts/js/bootstrap.min.js"></script>
-        <script src="./scripts/js/sweetalert2@11.js"></script>
-    </body>
+        </section>
+
+        <!-- Interactive Piano -->
+        <section class="piano-section">
+            <div class="piano-container">
+                <div id="piano"></div>
+                <div class="piano-overlay">
+                    <h2>Mirror Dream</h2>
+                    <div class="play-button" id="playButton">▶</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Artists Section -->
+        <section class="artists" id="artists">
+            <h2>Meet the Artists</h2>
+            <div class="artists-grid">
+                <div class="artist-card">
+                    <div class="artist-image">
+                        <img src="/placeholder.svg?height=200&width=200" alt="Artist 1">
+                    </div>
+                    <h3>Sarah Reed</h3>
+                    <p>Lead Vocals</p>
+                </div>
+                <div class="artist-card">
+                    <div class="artist-image">
+                        <img src="/placeholder.svg?height=200&width=200" alt="Artist 2">
+                    </div>
+                    <h3>Mike Turner</h3>
+                    <p>Guitar</p>
+                </div>
+                <div class="artist-card">
+                    <div class="artist-image">
+                        <img src="/placeholder.svg?height=200&width=200" alt="Artist 3">
+                    </div>
+                    <h3>Alex Chen</h3>
+                    <p>Drums</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Merch Section -->
+        <section class="merch" id="merch">
+            <h2>Exclusive Merch</h2>
+            <div class="merch-grid">
+                <div class="merch-card">
+                    <img src="/placeholder.svg?height=300&width=300" alt="Merch 1">
+                    <h3>Tour Shirt</h3>
+                    <p>$29.99</p>
+                </div>
+                <div class="merch-card">
+                    <img src="/placeholder.svg?height=300&width=300" alt="Merch 2">
+                    <h3>Vinyl Record</h3>
+                    <p>$39.99</p>
+                </div>
+                <div class="merch-card">
+                    <img src="/placeholder.svg?height=300&width=300" alt="Merch 3">
+                    <h3>Limited Poster</h3>
+                    <p>$19.99</p>
+                </div>
+            </div>
+        </section>
+    </main>`
+</script>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Trip</h3>
+                <p>Embrace the shadows, feel the rhythm</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="#shows">Shows</a>
+                <a href="#artists">Artists</a>
+                <a href="#merch">Merch</a>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <div class="social-links">
+                    <a href="#" class="social-link">Instagram</a>
+                    <a href="#" class="social-link">Twitter</a>
+                    <a href="#" class="social-link">Spotify</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Trip. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="./scripts/js/script.js"></script>
+</body>
 </html>

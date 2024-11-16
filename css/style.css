@@ -22,12 +22,11 @@
 }
 
 /* Fondo estilo grunge */
-/* body {
+body {
     background-color: #1D1D1D;
-/* background-image: url("https://www.transparenttextures.com/patterns/subtle-grunge.png"); */
+background-image: url("https://www.transparenttextures.com/patterns/subtle-grunge.png");
     background-image: url('../media/Identidad (Diseño)/Logo_wt.png');
-/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
-} */
+} 
 
 
 .text-A-1{

@@ -52,8 +52,23 @@
     background-color: rgba(0, 0, 0, 0.6); /* Ajusta el valor de opacidad aquí */
     z-index: 1;
 }
+/* Estado oculto (con d-none) */
+.d-none {
+  display: none; /* Sigue controlando la visibilidad */
+}
 
+/* Estado animado */
+.animar-aparicion {
+  opacity: 0; /* Comienza invisible */
+  transform: translateY(-10px); /* Desplazado ligeramente hacia arriba */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Suavizar los cambios */
+}
 
+/* Estado visible (cuando se muestra) */
+.animar-aparicion.mostrado {
+  opacity: 1; /* Totalmente visible */
+  transform: translateY(0); /* Sin desplazamiento */
+}
 
 </style>
 <body>
@@ -163,8 +178,10 @@
 
     </div>
   </main>
-  <!-- <footer>
-  </footer> -->
+  <footer style="
+  height: 50rem;
+  opacity: 0;">
+  </footer>
   <!-- Bootstrap JavaScript Libraries -->
   <script
   src="https://code.jquery.com/jquery-3.7.1.js"
@@ -183,16 +200,20 @@
   <script>
     // Volver accordeon y llenar list.json con lyrics
     url = 'https://trip.rocks'
-    // url = 'http://127.0.0.1:5500'
+    url = 'http://127.0.0.1:5500'
     fetch(url+'/scripts/py/list.json')
     .then(response=>response.json())
     .then(response=>{
-      console.log(response)
+      // console.log(response)
+      if(window.location.href.includes('publico')){
+        response = response.filter(e=> !e.Tipo.includes('SPEECH')&&!e.Tipo.includes('BREAK'))
+
+      }
       response.forEach(song=>{
         tipo = song.Tipo == 'Propio'?'distritales':song.Tipo=='Cover'?'internacionales':'nacionales'
         if (song.Side == 'A'){
           A_list.innerHTML+=`
-          <a href="#" class="art1 fade-up transform-up animate-bl views-row transform_up aparece text-decoration-none">
+          <div  class="art1 fade-up transform-up animate-bl views-row transform_up aparece text-decoration-none aparece song">
             <div class="views-field views-field-nothing">
               <span class="field-content">
                 <div class="box-art1 bord1 Artistas ${tipo} d-flex justify-content-between align-self-center mx-2 p-3">
@@ -201,12 +222,20 @@
                 </div>
               </span>
             </div>
-          </a>
-
+          </div>
+          <div class="art2 fade-up transform-up animate-bl views-row transform_up aparece text-decoration-none d-none">
+            <div class="views-field views-field-nothing">
+              <span class="field-content">
+                <div class="box-art1 bord1 Artistas ${tipo} d-flex justify-content-between align-self-center text-center mx-2 p-3">
+                  <h3 class="art-title m-auto">${song.Lyric}</h3>
+                </div>
+              </span>
+            </div>
+          </div>
           `
         }else if(song.Side == 'B'){
           B_list.innerHTML+=`
-          <a href="#" class="art1 fade-up transform-up animate-bl views-row transform_up aparece text-decoration-none">
+          <a href="#" class="art1 fade-up transform-up animate-bl views-row transform_up aparece text-decoration-none song">
             <div class="views-field views-field-nothing">
               <span class="field-content">
                 <div class="box-art1 bord1 Artistas ${tipo} d-flex justify-content-between align-self-center mx-2 p-3">
@@ -216,9 +245,36 @@
               </span>
             </div>
           </a>
+          <div class="art2 fade-up transform-up animate-bl views-row transform_up aparece text-decoration-none d-none">
+            <div class="views-field views-field-nothing">
+              <span class="field-content">
+                <div class="box-art1 bord1 Artistas ${tipo} d-flex justify-content-between align-self-center text-center mx-2 p-3">
+                  <h3 class="art-title m-auto">${song.Lyric}</h3>
+                </div>
+              </span>
+            </div>
+          </div>
           `
         }
       })
+      $('.song').on('click', function (e) {
+  e.preventDefault(); // Evitar comportamiento predeterminado
+  
+  const siguienteElemento = $(this).next(); // Seleccionar el elemento siguiente
+
+  if (siguienteElemento.hasClass('d-none')) {
+    // Si está oculto, quitar 'd-none', agregar animación y visibilidad
+    siguienteElemento.removeClass('d-none').addClass('animar-aparicion mostrado');
+  } else {
+    // Si está visible, agregar animación de salida y luego ocultar
+    siguienteElemento.removeClass('mostrado');
+    setTimeout(() => {
+      siguienteElemento.addClass('d-none'); // Aplicar d-none después de la animación
+    }, 500); // El tiempo debe coincidir con la duración de la transición (0.3s)
+  }
+});
+
+      
     })
   </script>
 
