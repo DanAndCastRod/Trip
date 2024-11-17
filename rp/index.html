@@ -179,8 +179,12 @@
     </div>
   </main>
   <footer style="
-  height: 50rem;
-  opacity: 0;">
+  height: 40rem;
+  opacity: 1;">
+  <div class="justify-content-center text-center">
+    <h3 class="art-title">Comparte!</h3>
+    <img src="../scripts/py/codigo_qr.png" alt="" srcset="">
+  </div>
   </footer>
   <!-- Bootstrap JavaScript Libraries -->
   <script
@@ -200,6 +204,7 @@
   <script>
     // Volver accordeon y llenar list.json con lyrics
     url = 'https://trip.rocks'
+    url = ''
     // url = 'http://127.0.0.1:5500'
     fetch(url+'/scripts/py/list.json')
     .then(response=>response.json())
