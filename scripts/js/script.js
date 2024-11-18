@@ -4,13 +4,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const notes = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'];
     
     // Create piano keys
-    for (let i = 0; i < 24; i++) {
-        const key = document.createElement('div');
-        const note = notes[i % 12];
-        key.className = `piano-key ${note.includes('#') ? 'black' : 'white'}`;
-        key.dataset.note = note;
-        piano.appendChild(key);
-    }
+    // for (let i = 0; i < 24; i++) {
+    //     const key = document.createElement('div');
+    //     const note = notes[i % 12];
+    //     key.className = `piano-key ${note.includes('#') ? 'black' : 'white'}`;
+    //     key.dataset.note = note;
+    //     piano.appendChild(key);
+    // }
 
     // Smooth scroll for navigation
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -44,38 +44,38 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Play button functionality
-    const playButton = document.getElementById('playButton');
-    let isPlaying = false;
+    // const playButton = document.getElementById('playButton');
+    // let isPlaying = false;
 
-    playButton.addEventListener('click', () => {
-        isPlaying = !isPlaying;
-        playButton.textContent = isPlaying ? '⏸' : '▶';
+    // playButton.addEventListener('click', () => {
+    //     isPlaying = !isPlaying;
+    //     playButton.textContent = isPlaying ? '⏸' : '▶';
         
-        if (isPlaying) {
-            // Add your music playing logic here
-            console.log('Music started playing');
-        } else {
-            // Add your music pause logic here
-            console.log('Music paused');
-        }
-    });
+    //     if (isPlaying) {
+    //         // Add your music playing logic here
+    //         console.log('Music started playing');
+    //     } else {
+    //         // Add your music pause logic here
+    //         console.log('Music paused');
+    //     }
+    // });
 
     // Piano key interaction
-    piano.addEventListener('click', (e) => {
-        if (e.target.classList.contains('piano-key')) {
-            const note = e.target.dataset.note;
-            playNote(note);
-            e.target.style.backgroundColor = '#04D99D';
-            setTimeout(() => {
-                e.target.style.backgroundColor = e.target.classList.contains('black') ? 'black' : 'white';
-            }, 200);
-        }
-    });
+    // piano.addEventListener('click', (e) => {
+    //     if (e.target.classList.contains('piano-key')) {
+    //         const note = e.target.dataset.note;
+    //         playNote(note);
+    //         e.target.style.backgroundColor = '#04D99D';
+    //         setTimeout(() => {
+    //             e.target.style.backgroundColor = e.target.classList.contains('black') ? 'black' : 'white';
+    //         }, 200);
+    //     }
+    // });
 
-    function playNote(note) {
-        // Add your note playing logic here
-        console.log(`Playing note: ${note}`);
-    }
+    // function playNote(note) {
+    //     // Add your note playing logic here
+    //     console.log(`Playing note: ${note}`);
+    // }
 
     // Header scroll effect
     let lastScroll = 0;

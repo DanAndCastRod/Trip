@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,39 @@
     <!-- <link rel="stylesheet" href="./css/style.css"> -->
     <link rel="stylesheet" href="./css/styles.css">
 </head>
+<style>
+    .hero {
+    position: relative; /* Necesario para posicionar elementos dentro del contenedor */
+    overflow: hidden; /* Evita que el video sobresalga de la sección */
+}
+
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que el video cubra todo el área sin distorsión */
+    z-index: -1; /* Envía el video al fondo detrás del contenido */
+}
+
+.hero-content {
+    position: relative; /* Para asegurar que el contenido esté encima del video */
+    text-align: center;
+    color: white; /* Ajusta el color del texto para que sea visible sobre el video */
+}
+#logo_ini {
+    /* Estilo predeterminado para dispositivos de escritorio */
+    height: 40vh; /* Tamaño fijo */
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) { /* Ajusta el tamaño según tu diseño */
+    #logo_ini {
+        height: 12rem !important; /* 50% del ancho de la pantalla */
+    }
+}
+</style>
 <body>
     <header>
         <nav>
@@ -22,126 +56,144 @@
             </div>
         </nav>
     </header>
-    
-<main>    <section class="hero">
-    <div class="hero-content">
-        <!-- <h1>Silhouette</h1> -->
-         <div><img src="./media/Identidad (Diseño)/Logo_wt.png" alt="" srcset="" style="height: 12rem;"></div>
-        <p>enjoy the trip!</p>
-        <button class="primary-button" onclick="window.location.href='./rp/'">Explore Show</button>
-        <button class="secondary-button">Listen Now</button>
-    </div>
-</section></main>
-<script>
-    `    <main>
+    <main>
+
         <!-- Hero Section -->
-
-        <!-- Partners Section -->
-        <section class="partners">
-            <h2>Our Partners</h2>
-            <div class="partner-logos">
-                <div class="partner">Partner 1</div>
-                <div class="partner">Partner 2</div>
-                <div class="partner">Partner 3</div>
+        <section class="hero">
+            <!-- Video de fondo -->
+            <video autoplay muted loop class="hero-video">
+                <source src="./media/website 2.mp4" type="video/mp4">
+                <!-- Mensaje alternativo si el video no se puede cargar -->
+                Tu navegador no soporta la reproducción de video.
+            </video>
+        
+            <div class="hero-content">
+                <!-- <h1>Silhouette</h1> -->
+                <div>
+                    <img id="logo_ini" src="./media/Identidad (Diseño)/Logo_wt.png" alt="Logo" >
+                </div>
+                <p>enjoy the trip!</p>
+                <button class="primary-button" onclick="window.location.href='./rp/'">Explore Show</button>
+                <button class="secondary-button">Listen Now</button>
             </div>
         </section>
 
-        <!-- Upcoming Shows -->
-        <section class="shows" id="shows">
-            <h2>Upcoming Shows</h2>
-            <div class="shows-grid">
-                <div class="show-card">
-                    <img src="/placeholder.svg?height=300&width=400" alt="Show 1">
-                    <div class="show-info">
-                        <h3>Live at Metro</h3>
-                        <p>December 15, 2023</p>
+    </main>
+    <script>
+        `    <main>
+            <!-- Partners Section -->
+            <section class="partners">
+                <h2>Our Partners</h2>
+                <div class="partner-logos">
+                    <div class="partner">Partner 1</div>
+                    <div class="partner">Partner 2</div>
+                    <div class="partner">Partner 3</div>
+                </div>
+            </section>
+        
+            <!-- Upcoming Shows -->
+            <section class="shows" id="shows">
+                <h2>Shows</h2>
+                <div class="shows-grid">
+                    <div class="show-card">
+                        <img src="http://via.placeholder.com/400x300" alt="Show 1">
+                        <div class="show-info">
+                            <h3>Live at Rock n' Chicharron</h3>
+                            <p>November 16, 2024</p>
+                        </div>
+                    </div>
+                    <div class="show-card">
+                        <img src="http://via.placeholder.com/400x300" alt="Show 2">
+                        <div class="show-info">
+                            <h3>Live at Delfos</h3>
+                            <p>July 20, 2024</p>
+                        </div>
+                    </div>
+                    <div class="show-card">
+                        <img src="http://via.placeholder.com/400x300" alt="Show 3">
+                        <div class="show-info">
+                            <h3>Live at Shuffle</h3>
+                            <p>April 6, 2024</p>
+                        </div>
                     </div>
                 </div>
-                <div class="show-card">
-                    <img src="/placeholder.svg?height=300&width=400" alt="Show 2">
-                    <div class="show-info">
-                        <h3>Festival Performance</h3>
-                        <p>December 20, 2023</p>
+            </section>
+        
+            <!-- Interactive Piano -->
+            <!-- <section class="piano-section">
+                <div class="piano-container">
+                    <div id="piano"></div>
+                    <div class="piano-overlay">
+                        <h2>Mirror Dream</h2>
+                        <div class="play-button" id="playButton">▶</div>
                     </div>
                 </div>
-                <div class="show-card">
-                    <img src="/placeholder.svg?height=300&width=400" alt="Show 3">
-                    <div class="show-info">
-                        <h3>Arena Tour</h3>
-                        <p>January 5, 2024</p>
+            </section> -->
+        
+            <!-- Artists Section -->
+            <section class="artists" id="artists">
+                <h2>Meet the Artists</h2>
+                <div class="artists-grid">
+                    <div class="artist-card">
+                        <div class="artist-image">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541?height=200&width=200" alt="Artist 1">
+                        </div>
+                        <h3>Daniel Castañeda</h3>
+                        <p>Lead Vocals</p>
+                    </div>
+                    <div class="artist-card">
+                        <div class="artist-image">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541?height=200&width=200" alt="Artist 2">
+                        </div>
+                        <h3>Oscar Rios</h3>
+                        <p>Guitar</p>
+                    </div>
+                    <div class="artist-card">
+                        <div class="artist-image">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541?height=200&width=200" alt="Artist 3">
+                        </div>
+                        <h3>Hector Saenz</h3>
+                        <p>Drums</p>
+                    </div>
+                    <div class="artist-card">
+                        <div class="artist-image">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541?height=200&width=200" alt="Artist 3">
+                        </div>
+                        <h3>John Serna</h3>
+                        <p>Bass</p>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <!-- Interactive Piano -->
-        <section class="piano-section">
-            <div class="piano-container">
-                <div id="piano"></div>
-                <div class="piano-overlay">
-                    <h2>Mirror Dream</h2>
-                    <div class="play-button" id="playButton">▶</div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Artists Section -->
-        <section class="artists" id="artists">
-            <h2>Meet the Artists</h2>
-            <div class="artists-grid">
-                <div class="artist-card">
-                    <div class="artist-image">
-                        <img src="/placeholder.svg?height=200&width=200" alt="Artist 1">
+            </section>
+        
+            <!-- Merch Section -->
+            <section class="merch" id="merch">
+                <h2>Exclusive Merch</h2>
+                <div class="merch-grid">
+                    <div class="merch-card">
+                        <img src="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-image_large.png?v=1530129081?height=300&width=300" alt="Merch 1">
+                        <h3>Tour Shirt</h3>
+                        <p>$29.99</p>
                     </div>
-                    <h3>Sarah Reed</h3>
-                    <p>Lead Vocals</p>
-                </div>
-                <div class="artist-card">
-                    <div class="artist-image">
-                        <img src="/placeholder.svg?height=200&width=200" alt="Artist 2">
+                    <div class="merch-card">
+                        <img src="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-image_large.png?v=1530129081?height=300&width=300" alt="Merch 2">
+                        <h3>Vinyl Record</h3>
+                        <p>$39.99</p>
                     </div>
-                    <h3>Mike Turner</h3>
-                    <p>Guitar</p>
-                </div>
-                <div class="artist-card">
-                    <div class="artist-image">
-                        <img src="/placeholder.svg?height=200&width=200" alt="Artist 3">
+                    <div class="merch-card">
+                        <img src="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-image_large.png?v=1530129081?height=300&width=300" alt="Merch 3">
+                        <h3>Limited Poster</h3>
+                        <p>$19.99</p>
                     </div>
-                    <h3>Alex Chen</h3>
-                    <p>Drums</p>
                 </div>
-            </div>
-        </section>
-
-        <!-- Merch Section -->
-        <section class="merch" id="merch">
-            <h2>Exclusive Merch</h2>
-            <div class="merch-grid">
-                <div class="merch-card">
-                    <img src="/placeholder.svg?height=300&width=300" alt="Merch 1">
-                    <h3>Tour Shirt</h3>
-                    <p>$29.99</p>
-                </div>
-                <div class="merch-card">
-                    <img src="/placeholder.svg?height=300&width=300" alt="Merch 2">
-                    <h3>Vinyl Record</h3>
-                    <p>$39.99</p>
-                </div>
-                <div class="merch-card">
-                    <img src="/placeholder.svg?height=300&width=300" alt="Merch 3">
-                    <h3>Limited Poster</h3>
-                    <p>$19.99</p>
-                </div>
-            </div>
-        </section>
+            </section>
     </main>`
-</script>
+    </script>
 
     <footer>
         <div class="footer-content">
             <div class="footer-section">
                 <h3>Trip</h3>
-                <p>Embrace the shadows, feel the rhythm</p>
+                <p>Enjoy the trip!</p>
             </div>
             <div class="footer-section">
                 <h3>Quick Links</h3>
@@ -152,9 +204,9 @@
             <div class="footer-section">
                 <h3>Connect</h3>
                 <div class="social-links">
-                    <a href="#" class="social-link">Instagram</a>
-                    <a href="#" class="social-link">Twitter</a>
-                    <a href="#" class="social-link">Spotify</a>
+                    <a href="https://www.instagram.com/trip.rock.band" class="social-link">Instagram</a>
+                    <!-- <a href="#" class="social-link">Twitter</a> -->
+                    <a href="#" class="social-link disabled">Spotify (soon)</a>
                 </div>
             </div>
         </div>
@@ -164,5 +216,9 @@
     </footer>
 
     <script src="./scripts/js/script.js"></script>
+    <script>
+        
+    </script>
 </body>
+
 </html>

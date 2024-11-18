@@ -1,9 +1,4 @@
 :root {
-    --color-primary: #9B44F2;
-    --color-dark: #1F1659;
-    --color-accent: #04D99D;
-    --color-accent-dark: #038C5A;
-    --color-light: #FFDF92;
     --color-side-A-1: #9B44F2;
     --color-side-A-2: #1F1659;
     --color-side-A-3: #04D99D;
@@ -24,6 +19,13 @@
     --color-side-B-3-rgb: 115, 38, 191;
     --color-side-B-4-rgb: 136, 61, 242;
     --color-side-B-5-rgb: 217, 46, 30;
+    --color-primary: var(--color-side-A-1);;
+    --color-dark: var(--color-side-A-2);
+    --color-accent: var(--color-side-A-3);
+    --color-accent-dark: var(--color-side-A-4);
+    --color-light: var(--color-side-A-5);
+    --color-dark-rgb: 15,15,15 
+    /* var(--color-side-A-2-rgb) */
 
 }
 
@@ -112,8 +114,8 @@ nav {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: linear-gradient(rgba(31, 22, 89, 0.8), rgba(31, 22, 89, 0.8)),
-                url('/placeholder.svg?height=1080&width=1920');
+    background: linear-gradient(rgba(var(--color-dark-rgb),0.5), rgba(var(--color-dark-rgb), 0.8));
+                /* url('/placeholder.svg?height=1080&width=1920'); */
     background-size: cover;
     background-position: center;
 }
@@ -177,7 +179,7 @@ nav {
     bottom: 0;
     width: 100%;
     padding: 1rem;
-    background: linear-gradient(transparent, rgba(31, 22, 89, 0.9));
+    background: linear-gradient(transparent, rgba(var(--color-dark-rgb), 0.9));
 }
 
 /* Piano Section */
@@ -261,7 +263,7 @@ nav {
 }
 
 .merch-card {
-    background: rgba(31, 22, 89, 0.5);
+    background: rgba(var(--color-dark-rgb), 0.5);
     padding: 1rem;
     border-radius: 10px;
     text-align: center;
