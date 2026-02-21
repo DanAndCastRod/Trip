@@ -1,225 +1,220 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trip - Official Website</title>
-    <!-- <link rel="stylesheet" href="./css/style.css"> -->
+    <title>TRIP | Enjoy the trip</title>
+    
+    <!-- Google Fonts: Official Trip Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Permanent+Marker&family=Poppins:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
     <link rel="stylesheet" href="./css/styles.css">
-    <link rel="shortcut icon" href="./media/Identidad (Diseño)/Logo_bk.png" type="image/x-icon">
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./media/Identidad (Diseño)/Logo_wt.png" type="image/x-icon">
 </head>
-<style>
-    .hero {
-    position: relative; /* Necesario para posicionar elementos dentro del contenedor */
-    overflow: hidden; /* Evita que el video sobresalga de la sección */
-}
-
-.hero-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Asegura que el video cubra todo el área sin distorsión */
-    z-index: -1; /* Envía el video al fondo detrás del contenido */
-}
-
-.hero-content {
-    position: relative; /* Para asegurar que el contenido esté encima del video */
-    text-align: center;
-    color: white; /* Ajusta el color del texto para que sea visible sobre el video */
-}
-#logo_ini {
-    /* Estilo predeterminado para dispositivos de escritorio */
-    height: 40vh; /* Tamaño fijo */
-}
-
-/* Media query para dispositivos móviles */
-@media (max-width: 768px) { /* Ajusta el tamaño según tu diseño */
-    #logo_ini {
-        height: 12rem !important; /* 50% del ancho de la pantalla */
-    }
-}
-</style>
 <body>
-    <header>
-        <nav>
-            <div class="logo" style="display: flex;">
-                <img src="./media/Identidad (Diseño)/Logo_wt.png" alt="" srcset="" style="height: 48px;">
-            </div>
-            <div class="nav-links">
-                <a href="#shows">Shows</a>
-                <a href="#artists">Artists</a>
-                <a href="#merch">Merch</a>
-                <a href="#contact">Contact</a>
-                <button class="cta-button">Book Now</button>
-            </div>
-        </nav>
-    </header>
-    <main>
 
-        <!-- Hero Section -->
-        <section class="hero">
-            <!-- Video de fondo -->
-            <video autoplay muted loop class="hero-video">
-                <source src="./media/website 2.mp4" type="video/mp4">
-                <!-- Mensaje alternativo si el video no se puede cargar -->
-                Tu navegador no soporta la reproducción de video.
-            </video>
-        
-            <div class="hero-content">
-                <!-- <h1>Silhouette</h1> -->
-                <div>
-                    <img id="logo_ini" src="./media/Identidad (Diseño)/Logo_wt.png" alt="Logo" >
-                </div>
-                <p>enjoy the trip!</p>
-                <button class="primary-button" onclick="window.location.href='./rp/'">Explore Show</button>
-                <button class="secondary-button">Listen Now</button>
+    <!-- Header -->
+    <header class="glass">
+        <a href="#home" class="logo">
+            <img src="./media/Identidad (Diseño)/Logo_wt.png" alt="TRIP Logo">
+        </a>
+        <nav class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#manifiesto">Manifiesto</a>
+            <a href="#banda">Tripulantes</a>
+            <a href="#shows">Shows</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+        <div class="logo-mobile" style="display: none;">
+            <span style="font-size: 1.5rem; cursor: pointer;">☰</span>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section (THE MIRROR) -->
+        <section id="home" class="hero">
+            <div class="mirror-shard shard-left"></div>
+            <div class="mirror-shard shard-right"></div>
+            
+            <div class="hero-title-container reveal">
+                <img src="./media/Identidad (Diseño)/Logo_wt.png" alt="TRIP" class="hero-logo">
+                <p class="hero-subtitle glitch" data-text="ENJOY THE TRIP">ENJOY THE TRIP</p>
+                
+                <a href="#manifiesto" class="btn-trip">INITIATE SEQUENCE</a>
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div style="position: absolute; bottom: 30px; animation: bounce 2s infinite;">
+                <span class="font-heading" style="font-size: 0.8rem; color: var(--color-bone);">SCROLL TO DESCEND</span>
             </div>
         </section>
 
-    </main>
-    <script>
-        `    <main>
-            <!-- Partners Section -->
-            <section class="partners">
-                <h2>Our Partners</h2>
-                <div class="partner-logos">
-                    <div class="partner">Partner 1</div>
-                    <div class="partner">Partner 2</div>
-                    <div class="partner">Partner 3</div>
+        <!-- Manifiesto Section (THE STATIC) -->
+        <section id="manifiesto" class="manifesto">
+            <div class="manifesto-content reveal">
+                <h2 class="glitch" data-text="THE SIGNAL">THE SIGNAL</h2>
+                
+                <div class="quote-box">
+                    <p>
+                        "NO SOMOS UNA BANDA, SOMOS EL <span class="highlight">VEHÍCULO</span> PARA ATRAVESAR LA DISONANCIA ENTRE QUIÉN ERES Y QUIÉN TE DIJERON QUE FUERAS."
+                    </p>
+                    <br>
+                    <p style="font-family: var(--font-body); font-size: 1.2rem; color: var(--color-bone);">
+                        NUESTRA MÚSICA NO ES UN DESTINO, ES EL PROCESO DE <span class="highlight">DEFORMARNOS</span> Y REDEFINIRNOS.
+                    </p>
                 </div>
-            </section>
-        
-            <!-- Upcoming Shows -->
-            <section class="shows" id="shows">
-                <h2>Shows</h2>
-                <div class="shows-grid">
-                    <div class="show-card">
-                        <img src="http://via.placeholder.com/400x300" alt="Show 1">
-                        <div class="show-info">
-                            <h3>Live at Rock n' Chicharron</h3>
-                            <p>November 16, 2024</p>
-                        </div>
-                    </div>
-                    <div class="show-card">
-                        <img src="http://via.placeholder.com/400x300" alt="Show 2">
-                        <div class="show-info">
-                            <h3>Live at Delfos</h3>
-                            <p>July 20, 2024</p>
-                        </div>
-                    </div>
-                    <div class="show-card">
-                        <img src="http://via.placeholder.com/400x300" alt="Show 3">
-                        <div class="show-info">
-                            <h3>Live at Shuffle</h3>
-                            <p>April 6, 2024</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        
-            <!-- Interactive Piano -->
-            <!-- <section class="piano-section">
-                <div class="piano-container">
-                    <div id="piano"></div>
-                    <div class="piano-overlay">
-                        <h2>Mirror Dream</h2>
-                        <div class="play-button" id="playButton">▶</div>
-                    </div>
-                </div>
-            </section> -->
-        
-            <!-- Artists Section -->
-            <section class="artists" id="artists">
-                <h2>Meet the Artists</h2>
-                <div class="artists-grid">
-                    <div class="artist-card">
-                        <div class="artist-image">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541?height=200&width=200" alt="Artist 1">
-                        </div>
-                        <h3>Daniel Castañeda</h3>
-                        <p>Lead Vocals</p>
-                    </div>
-                    <div class="artist-card">
-                        <div class="artist-image">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541?height=200&width=200" alt="Artist 2">
-                        </div>
-                        <h3>Oscar Rios</h3>
-                        <p>Guitar</p>
-                    </div>
-                    <div class="artist-card">
-                        <div class="artist-image">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541?height=200&width=200" alt="Artist 3">
-                        </div>
-                        <h3>Hector Saenz</h3>
-                        <p>Drums</p>
-                    </div>
-                    <div class="artist-card">
-                        <div class="artist-image">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541?height=200&width=200" alt="Artist 3">
-                        </div>
-                        <h3>John Serna</h3>
-                        <p>Bass</p>
-                    </div>
-                </div>
-            </section>
-        
-            <!-- Merch Section -->
-            <section class="merch" id="merch">
-                <h2>Exclusive Merch</h2>
-                <div class="merch-grid">
-                    <div class="merch-card">
-                        <img src="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-image_large.png?v=1530129081?height=300&width=300" alt="Merch 1">
-                        <h3>Tour Shirt</h3>
-                        <p>$29.99</p>
-                    </div>
-                    <div class="merch-card">
-                        <img src="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-image_large.png?v=1530129081?height=300&width=300" alt="Merch 2">
-                        <h3>Vinyl Record</h3>
-                        <p>$39.99</p>
-                    </div>
-                    <div class="merch-card">
-                        <img src="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-image_large.png?v=1530129081?height=300&width=300" alt="Merch 3">
-                        <h3>Limited Poster</h3>
-                        <p>$19.99</p>
-                    </div>
-                </div>
-            </section>
-    </main>`
-    </script>
+            </div>
+        </section>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Trip</h3>
-                <p>Enjoy the trip!</p>
+        <!-- Band Members (THE DEEP / AVATARS) -->
+        <section id="banda">
+            <div style="text-align: center; margin-bottom: 4rem;">
+                <h2 class="glitch" data-text="THE CREW">THE CREW</h2>
+                <p style="font-family: var(--font-heading-tech); letter-spacing: 4px; color: var(--color-neon-aqua);">AVATARS ACTIVATED</p>
             </div>
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <a href="#shows">Shows</a>
-                <a href="#artists">Artists</a>
-                <a href="#merch">Merch</a>
-            </div>
-            <div class="footer-section">
-                <h3>Connect</h3>
-                <div class="social-links">
-                    <a href="https://www.instagram.com/trip.rock.band" class="social-link">Instagram</a>
-                    <!-- <a href="#" class="social-link">Twitter</a> -->
-                    <a href="#" class="social-link disabled">Spotify (soon)</a>
+            
+            <div class="band-grid">
+                <!-- Dani -->
+                <div class="member-card reveal">
+                    <div class="member-image-container">
+                        <img src="./media/fotos/Seleccion pagina/R&C/16-NOV-24/Copia de IMG_1806.JPG" alt="Dani - Voz" class="member-photo">
+                        <div class="member-overlay"></div>
+                    </div>
+                    <div class="member-info">
+                        <div class="member-element">ELEMENT: AIR</div>
+                        <h3 class="member-name">DANI</h3>
+                        <div class="member-role">VOZ // NAVEGANTE</div>
+                        <p class="member-quote">"La fuerza que transmite"</p>
+                    </div>
+                </div>
+
+                <!-- Os -->
+                <div class="member-card reveal">
+                    <div class="member-image-container">
+                        <img src="./media/fotos/Seleccion Oscar/IMG_1535.JPG" alt="Os - Guitarra" class="member-photo">
+                        <div class="member-overlay"></div>
+                    </div>
+                    <div class="member-info">
+                        <div class="member-element" style="color: var(--color-alert-red);">ELEMENT: FIRE</div>
+                        <h3 class="member-name">OS</h3>
+                        <div class="member-role">GUITARRA // PROPULSOR</div>
+                        <p class="member-quote">"El cohete"</p>
+                    </div>
+                </div>
+
+                <!-- Jon -->
+                <div class="member-card reveal">
+                    <div class="member-image-container">
+                        <img src="./media/fotos/Seleccion Fotos  Jhon/foto estudio/IMG_2031.JPG" alt="Jon - Bajo" class="member-photo">
+                        <div class="member-overlay"></div>
+                    </div>
+                    <div class="member-info">
+                        <div class="member-element" style="color: var(--color-signal-green);">ELEMENT: EARTH</div>
+                        <h3 class="member-name">JON</h3>
+                        <div class="member-role">BAJO // ANCLA</div>
+                        <p class="member-quote">"Don oído absoluto"</p>
+                    </div>
+                </div>
+
+                <!-- Hec -->
+                <div class="member-card reveal">
+                    <div class="member-image-container">
+                        <img src="./media/fotos/Seleccion pagina/R&C/16-NOV-24/Copia de IMG_1923.JPG" alt="Hec - Batería" class="member-photo">
+                        <div class="member-overlay"></div>
+                    </div>
+                    <div class="member-info">
+                        <div class="member-element" style="color: #607D8B;">ELEMENT: METAL</div>
+                        <h3 class="member-name">HEC</h3>
+                        <div class="member-role">BATERÍA // ESTRUCTURA</div>
+                        <p class="member-quote">"El pulso"</p>
+                    </div>
                 </div>
             </div>
+        </section>
+
+        <!-- Shows Section (FLIGHT LOG) -->
+        <section id="shows">
+            <div style="text-align: center; margin-bottom: 4rem;">
+                <h2 class="glitch" data-text="FLIGHT LOG">FLIGHT LOG</h2>
+            </div>
+            
+            <div class="shows-container" style="max-width: 900px; margin: 0 auto;">
+                <div class="show-item reveal">
+                    <div class="show-date">16 NOV</div>
+                    <div class="show-venue">ROCK N' CHICHARRON</div>
+                    <a href="#" class="btn-trip" style="padding: 0.5rem 1.5rem; font-size: 0.8rem;">TICKETS</a>
+                </div>
+                
+                <div class="show-item reveal">
+                    <div class="show-date">20 JUL</div>
+                    <div class="show-venue">DELFOS BAR</div>
+                    <span style="font-family: var(--font-heading-tech); color: var(--color-alert-red); letter-spacing: 2px;">SOLD OUT</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contacto">
+        <div class="footer-logo">TRIP</div>
+        <p style="color: var(--color-bone); letter-spacing: 4px; text-transform: uppercase; font-size: 0.8rem;">Mirror Dream / Silhouette</p>
+        
+        <div class="socials">
+            <a href="https://www.instagram.com/trip.rock.band" target="_blank" class="social-icon">
+                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="#" class="social-icon">
+                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2.917 16.083c-.311.044-.774.204-1.083-.158-.284-.332-.249-.838.083-1.167 2.376-2.316 6.004-2.28 6.166-2.278.414.008.818.396.791.809-.026.416-.397.749-.809.791-.048 0-3.051-.019-4.833 1.666-.172.164-.265.215-.315.337zm1.5-3c-.156.406-.822.469-1.083.084-.239-.356-.169-.976.167-1.334 3.125-3.315 7.875-3.042 7.917-3.042.413.008.817.396.791.791-.025.429-.406.772-.833.791-.041 0-4.042-.239-6.584 2.459-.114.122-.224.167-.375.251zm5.166-3.75c-4.436-.263-8.25 1.902-8.416 2.016-.487.329-1.029.079-1.25-.167-.225-.262-.258-.871.25-1.25.105-.078 4.417-2.738 9.584-2.458.552.031.958.434.916.916-.036.425-.434.821-.916.855-.054.004-.112.007-.168.088z"/></svg>
+            </a>
+            <a href="#" class="social-icon">
+                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+            </a>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 Trip. All rights reserved.</p>
-        </div>
+        
+        <p style="margin-top: 3rem; color: rgba(255,255,255,0.5); font-size: 0.8rem;">
+            &copy; 2026 Trip Rock Band. <br>
+            Pereira, Colombia.
+        </p>
     </footer>
 
-    <script src="./scripts/js/script.js"></script>
+    <!-- Scripts -->
     <script>
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Intersection Observer for Scroll Animations
+        // Use progressive enhancement: elements are visible by default.
+        // JS adds 'reveal-hidden' class on load, then removes it when intersecting.
         
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.remove('reveal-hidden');
+                    entry.target.classList.add('reveal-visible');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        // Initialize animations only if JS works
+        document.querySelectorAll('.reveal').forEach(el => {
+            el.classList.add('reveal-hidden'); // Hide initially via JS
+            observer.observe(el);
+        });
     </script>
 </body>
-
 </html>
